@@ -5,11 +5,6 @@ body {
   margin: auto;
   background-color: #253e46;
   font-family: Arial, Helvetica, sans-serif;
-  color: #fcfcfc;
-  background-image: url(mig.jpg);
-  background-size: 100%;
-  background-repeat: no-repeat;
-  background-position: center;
 }
 
 nav {
@@ -20,8 +15,6 @@ nav {
 }
 nav a {
   text-decoration: none;
-  color: #f6c6cc;
-  padding: 2%;
   font-size: 2vw;
   color: #ffd580;
   padding: 1%;
@@ -42,7 +35,6 @@ main {
   background-position: center;
 }
 header {
-  font-size: 150%;
   grid-area: header;
   font-size: 10vw;
   text-align: center;
