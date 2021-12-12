@@ -1,3 +1,6 @@
+html {
+  scroll-behavior: smooth;
+}
 body {
   margin: auto;
   background-color: #253e46;
@@ -19,6 +22,9 @@ nav a {
   text-decoration: none;
   color: #f6c6cc;
   padding: 2%;
+  font-size: 2vw;
+  color: #ffd580;
+  padding: 1%;
 }
 a {
   -webkit-transition: color;
@@ -28,8 +34,79 @@ nav a:hover {
   background-color: #fcfcfc;
   color: #253e46;
 }
+
+main {
+  background-image: url(mig.jpg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
 header {
   font-size: 150%;
+  grid-area: header;
+  font-size: 10vw;
   text-align: center;
+  color: #ffd580;
   background-color: #253e46;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  padding-bottom: 1%;
+}
+p {
+  font-size: 3vw;
+  background-color: #ffd580;
+  padding: 5%;
+}
+/* grid*/
+.mig {
+  grid-area: mig;
+}
+.responsive {
+  height: auto;
+  width: 100%;
+}
+.hgrid-container {
+  display: grid;
+  grid-template-areas:
+    "mig . ."
+    "mig header ."
+    "mig . .";
+  grid-template-rows: 1fr 2fr 1fr;
+  grid-template-columns: 1fr 2fr 1fr;
+  padding: 5%;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    " miga texta texta"
+    " textb textb migb"
+    " migc textc textc";
+
+  padding: 5%;
+}
+
+.miga {
+  grid-area: miga;
+}
+.migb {
+  grid-area: migb;
+}
+.migc {
+  grid-area: migc;
+}
+.texta {
+  grid-area: texta;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+.textb {
+  grid-area: textb;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+.textc {
+  grid-area: textc;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
 }
