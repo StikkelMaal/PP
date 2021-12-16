@@ -16,7 +16,7 @@ nav {
 nav a {
   text-decoration: none;
   font-size: 2vw;
-  color: #ffd580;
+  color: #fcfcfc;
   padding: 1%;
 }
 a {
@@ -29,34 +29,64 @@ nav a:hover {
 }
 
 main {
-  background-image: url(mig.jpg);
+  background-image: url(billeder/baggrund.jpg);
   background-size: 100%;
   background-repeat: no-repeat;
   background-position: center;
 }
 header {
   grid-area: header;
-  font-size: 10vw;
+  font-weight: bold;
+  font-size: 8vw;
   text-align: center;
-  color: #ffd580;
-  background-color: #253e46;
-  border-top-right-radius: 20px;
-  border-bottom-right-radius: 20px;
-  padding-bottom: 1%;
+  background-color: #ffd580;
+}
+footer {
+  grid-area: footer;
+  background-color: #ffd580;
+  font-size: 2vw;
+  padding: 2%;
+}
+
+h1 {
+  grid-area: header;
+  font-size: 6vw;
+  text-align: center;
+  background-color: #ffd580;
+
+  margin-left: 25%;
+  margin-right: 25%;
+}
+h2 {
+  font-size: 3vw;
+  font-weight: bold;
+  text-align: center;
+  background-color: #ffd580;
+  padding: 3%;
+}
+h3 {
+  font-size: 3vw;
+  font-weight: bold;
+  text-align: center;
+  background-color: #ffd580;
+  padding: 3%;
 }
 p {
-  font-size: 3vw;
+  font-size: 2.5vw;
   background-color: #ffd580;
   padding: 5%;
 }
-/* grid*/
-.mig {
-  grid-area: mig;
-}
+
 .responsive {
   height: auto;
   width: 100%;
 }
+
+/* grid til main*/
+.mig {
+  grid-area: mig;
+}
+
 .hgrid-container {
   display: grid;
   grid-template-areas:
@@ -67,13 +97,13 @@ p {
   grid-template-columns: 1fr 2fr 1fr;
   padding: 5%;
 }
-
-.grid-container {
+/* grid til om mig*/
+.ommiggrid-container {
   display: grid;
   grid-template-areas:
-    " miga texta texta"
-    " textb textb migb"
-    " migc textc textc";
+    " miga . ."
+    " miga texta ."
+    " miga . .";
 
   padding: 5%;
 }
@@ -81,24 +111,140 @@ p {
 .miga {
   grid-area: miga;
 }
-.migb {
-  grid-area: migb;
-}
-.migc {
-  grid-area: migc;
-}
+
 .texta {
   grid-area: texta;
-  border-top-right-radius: 20px;
-  border-bottom-right-radius: 20px;
+  font-size: 2vw;
+  background-color: #ffd580;
+  padding: 5%;
 }
-.textb {
-  grid-area: textb;
-  border-top-left-radius: 20px;
-  border-bottom-left-radius: 20px;
+/* grid til projekter*/
+
+.projektergrid-container {
+  display: grid;
+  grid-template-areas:
+    "t1"
+    "p1"
+    "t2"
+    "p2"
+    "t3"
+    "p3"
+    "t4"
+    "p4"
+    "t5"
+    "p5"
+    "t6"
+    "p6";
+
+  grid-template-columns: 1fr;
+  padding: 5%;
 }
-.textc {
-  grid-area: textc;
-  border-top-right-radius: 20px;
-  border-bottom-right-radius: 20px;
+.beskrivelsegrid-container {
+  display: grid;
+  grid-template-areas:
+    "p1 t1 t1 "
+    "t2 t2 p2"
+    "p3 t3 t3"
+    "t4 t4 p4"
+    "p5 t5 t5"
+    "t6 t6 p6"
+    " footer footer footer";
+
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 5%;
+  grid-row-gap: 5%;
+}
+.p1 {
+  grid-area: p1;
+}
+.p2 {
+  grid-area: p2;
+}
+.p3 {
+  grid-area: p3;
+}
+.p4 {
+  grid-area: p4;
+}
+.p5 {
+  grid-area: p5;
+}
+.p6 {
+  grid-area: p6;
+}
+.t1 {
+  grid-area: t1;
+}
+.t2 {
+  grid-area: t2;
+}
+.t3 {
+  grid-area: t3;
+}
+.t4 {
+  grid-area: t4;
+}
+.t5 {
+  grid-area: t5;
+}
+.t6 {
+  grid-area: t6;
+}
+
+@media (min-width: 600px) {
+  .projektergrid-container {
+    display: grid;
+    grid-template-areas:
+      "t1 t2 t3"
+      "p1 p2 p3"
+      "t4 t5 t6"
+      "p4 p5 p6";
+
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 2fr 1fr 2fr;
+    padding: 5%;
+    grid-column-gap: 5%;
+    grid-row-gap: 0%;
+  }
+  h2 {
+    font-size: 3vw;
+    font-weight: normal;
+    text-align: center;
+    background-color: #ffd580;
+    margin: 0%;
+    margin-top: auto;
+    margin-bottom: auto;
+    padding: 3%;
+  }
+  h3 {
+    font-size: 3vw;
+    font-weight: normal;
+    text-align: center;
+    background-color: #ffd580;
+    margin: 0%;
+    margin-top: auto;
+    margin-bottom: auto;
+    padding: 3%;
+  }
+  p {
+    font-size: 2vw;
+    background-color: #ffd580;
+    padding: 5%;
+  }
+
+  .beskrivelsegrid-container {
+    display: grid;
+    grid-template-areas:
+      "p1 t1 t1 "
+      "t2 t2 p2"
+      "p3 t3 t3"
+      "t4 t4 p4"
+      "p5 t5 t5"
+      "t6 t6 p6"
+      "footer footer footer";
+
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 5%;
+    grid-row-gap: 5%;
+  }
 }
